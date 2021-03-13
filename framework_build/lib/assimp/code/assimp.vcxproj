@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{38959EBA-B2C4-363C-B3D5-92A5EC9E0638}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>assimp</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\bin\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">assimp.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">assimp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\bin\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">assimp.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">assimp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\bin\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">assimp.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">assimp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\bin\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">assimp.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">assimp</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_EXPORT;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_AMF_EXPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_AC_EXPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_ASE_EXPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_EXPORTER;ASSIMP_BUILD_NO_ASSXML_IMPORTER;ASSIMP_BUILD_NO_ASSXML_EXPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_B3D_EXPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_BVH_EXPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_COLLADA_EXPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_DXF_EXPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_CSM_EXPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_HMP_EXPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_EXPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRR_EXPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_LWO_EXPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_LWS_EXPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MDC_EXPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_NFF_EXPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_NDO_EXPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_OFF_EXPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_OGRE_EXPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_EXPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_PLY_EXPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_MS3D_EXPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_COB_EXPORTER;ASSIMP_BUILD_NO_BLEND_IMPORTER;ASSIMP_BUILD_NO_BLEND_EXPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_IFC_EXPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_XGL_EXPORTER;ASSIMP_BUILD_NO_FBX_IMPORTER;ASSIMP_BUILD_NO_FBX_EXPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_Q3D_EXPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_EXPORTER;ASSIMP_BUILD_NO_RAW_IMPORTER;ASSIMP_BUILD_NO_RAW_EXPORTER;ASSIMP_BUILD_NO_SIB_IMPORTER;ASSIMP_BUILD_NO_SIB_EXPORTER;ASSIMP_BUILD_NO_SMD_IMPORTER;ASSIMP_BUILD_NO_SMD_EXPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_STL_EXPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_EXPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_3D_EXPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_X_EXPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;ASSIMP_BUILD_NO_X3D_EXPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_3MF_EXPORTER;ASSIMP_BUILD_NO_MMD_IMPORTER;ASSIMP_BUILD_NO_MMD_EXPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;CMAKE_INTDIR="Debug";assimp_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WIN32_LEAN_AND_MEAN;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_EXPORT;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_AMF_EXPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_AC_EXPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_ASE_EXPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_EXPORTER;ASSIMP_BUILD_NO_ASSXML_IMPORTER;ASSIMP_BUILD_NO_ASSXML_EXPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_B3D_EXPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_BVH_EXPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_COLLADA_EXPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_DXF_EXPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_CSM_EXPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_HMP_EXPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_EXPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRR_EXPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_LWO_EXPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_LWS_EXPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MDC_EXPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_NFF_EXPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_NDO_EXPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_OFF_EXPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_OGRE_EXPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_EXPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_PLY_EXPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_MS3D_EXPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_COB_EXPORTER;ASSIMP_BUILD_NO_BLEND_IMPORTER;ASSIMP_BUILD_NO_BLEND_EXPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_IFC_EXPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_XGL_EXPORTER;ASSIMP_BUILD_NO_FBX_IMPORTER;ASSIMP_BUILD_NO_FBX_EXPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_Q3D_EXPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_EXPORTER;ASSIMP_BUILD_NO_RAW_IMPORTER;ASSIMP_BUILD_NO_RAW_EXPORTER;ASSIMP_BUILD_NO_SIB_IMPORTER;ASSIMP_BUILD_NO_SIB_EXPORTER;ASSIMP_BUILD_NO_SMD_IMPORTER;ASSIMP_BUILD_NO_SMD_EXPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_STL_EXPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_EXPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_3D_EXPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_X_EXPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;ASSIMP_BUILD_NO_X3D_EXPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_3MF_EXPORTER;ASSIMP_BUILD_NO_MMD_IMPORTER;ASSIMP_BUILD_NO_MMD_EXPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;CMAKE_INTDIR=\"Debug\";assimp_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\..\bin\lib\Debug\zlibstaticd.lib;..\..\..\..\bin\lib\Debug\IrrXML.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/bin/lib/Debug/assimp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/bin/bin/Debug/assimp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_EXPORT;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_AMF_EXPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_AC_EXPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_ASE_EXPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_EXPORTER;ASSIMP_BUILD_NO_ASSXML_IMPORTER;ASSIMP_BUILD_NO_ASSXML_EXPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_B3D_EXPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_BVH_EXPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_COLLADA_EXPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_DXF_EXPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_CSM_EXPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_HMP_EXPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_EXPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRR_EXPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_LWO_EXPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_LWS_EXPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MDC_EXPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_NFF_EXPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_NDO_EXPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_OFF_EXPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_OGRE_EXPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_EXPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_PLY_EXPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_MS3D_EXPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_COB_EXPORTER;ASSIMP_BUILD_NO_BLEND_IMPORTER;ASSIMP_BUILD_NO_BLEND_EXPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_IFC_EXPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_XGL_EXPORTER;ASSIMP_BUILD_NO_FBX_IMPORTER;ASSIMP_BUILD_NO_FBX_EXPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_Q3D_EXPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_EXPORTER;ASSIMP_BUILD_NO_RAW_IMPORTER;ASSIMP_BUILD_NO_RAW_EXPORTER;ASSIMP_BUILD_NO_SIB_IMPORTER;ASSIMP_BUILD_NO_SIB_EXPORTER;ASSIMP_BUILD_NO_SMD_IMPORTER;ASSIMP_BUILD_NO_SMD_EXPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_STL_EXPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_EXPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_3D_EXPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_X_EXPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;ASSIMP_BUILD_NO_X3D_EXPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_3MF_EXPORTER;ASSIMP_BUILD_NO_MMD_IMPORTER;ASSIMP_BUILD_NO_MMD_EXPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;CMAKE_INTDIR="Release";assimp_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_EXPORT;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_AMF_EXPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_AC_EXPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_ASE_EXPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_EXPORTER;ASSIMP_BUILD_NO_ASSXML_IMPORTER;ASSIMP_BUILD_NO_ASSXML_EXPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_B3D_EXPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_BVH_EXPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_COLLADA_EXPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_DXF_EXPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_CSM_EXPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_HMP_EXPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_EXPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRR_EXPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_LWO_EXPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_LWS_EXPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MDC_EXPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_NFF_EXPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_NDO_EXPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_OFF_EXPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_OGRE_EXPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_EXPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_PLY_EXPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_MS3D_EXPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_COB_EXPORTER;ASSIMP_BUILD_NO_BLEND_IMPORTER;ASSIMP_BUILD_NO_BLEND_EXPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_IFC_EXPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_XGL_EXPORTER;ASSIMP_BUILD_NO_FBX_IMPORTER;ASSIMP_BUILD_NO_FBX_EXPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_Q3D_EXPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_EXPORTER;ASSIMP_BUILD_NO_RAW_IMPORTER;ASSIMP_BUILD_NO_RAW_EXPORTER;ASSIMP_BUILD_NO_SIB_IMPORTER;ASSIMP_BUILD_NO_SIB_EXPORTER;ASSIMP_BUILD_NO_SMD_IMPORTER;ASSIMP_BUILD_NO_SMD_EXPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_STL_EXPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_EXPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_3D_EXPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_X_EXPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;ASSIMP_BUILD_NO_X3D_EXPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_3MF_EXPORTER;ASSIMP_BUILD_NO_MMD_IMPORTER;ASSIMP_BUILD_NO_MMD_EXPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;CMAKE_INTDIR=\"Release\";assimp_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\..\bin\lib\Release\zlibstatic.lib;..\..\..\..\bin\lib\Release\IrrXML.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/bin/lib/Release/assimp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/bin/bin/Release/assimp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_EXPORT;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_AMF_EXPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_AC_EXPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_ASE_EXPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_EXPORTER;ASSIMP_BUILD_NO_ASSXML_IMPORTER;ASSIMP_BUILD_NO_ASSXML_EXPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_B3D_EXPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_BVH_EXPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_COLLADA_EXPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_DXF_EXPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_CSM_EXPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_HMP_EXPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_EXPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRR_EXPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_LWO_EXPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_LWS_EXPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MDC_EXPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_NFF_EXPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_NDO_EXPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_OFF_EXPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_OGRE_EXPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_EXPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_PLY_EXPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_MS3D_EXPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_COB_EXPORTER;ASSIMP_BUILD_NO_BLEND_IMPORTER;ASSIMP_BUILD_NO_BLEND_EXPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_IFC_EXPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_XGL_EXPORTER;ASSIMP_BUILD_NO_FBX_IMPORTER;ASSIMP_BUILD_NO_FBX_EXPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_Q3D_EXPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_EXPORTER;ASSIMP_BUILD_NO_RAW_IMPORTER;ASSIMP_BUILD_NO_RAW_EXPORTER;ASSIMP_BUILD_NO_SIB_IMPORTER;ASSIMP_BUILD_NO_SIB_EXPORTER;ASSIMP_BUILD_NO_SMD_IMPORTER;ASSIMP_BUILD_NO_SMD_EXPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_STL_EXPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_EXPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_3D_EXPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_X_EXPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;ASSIMP_BUILD_NO_X3D_EXPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_3MF_EXPORTER;ASSIMP_BUILD_NO_MMD_IMPORTER;ASSIMP_BUILD_NO_MMD_EXPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;CMAKE_INTDIR="MinSizeRel";assimp_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_EXPORT;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_AMF_EXPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_AC_EXPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_ASE_EXPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_EXPORTER;ASSIMP_BUILD_NO_ASSXML_IMPORTER;ASSIMP_BUILD_NO_ASSXML_EXPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_B3D_EXPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_BVH_EXPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_COLLADA_EXPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_DXF_EXPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_CSM_EXPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_HMP_EXPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_EXPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRR_EXPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_LWO_EXPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_LWS_EXPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MDC_EXPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_NFF_EXPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_NDO_EXPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_OFF_EXPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_OGRE_EXPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_EXPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_PLY_EXPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_MS3D_EXPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_COB_EXPORTER;ASSIMP_BUILD_NO_BLEND_IMPORTER;ASSIMP_BUILD_NO_BLEND_EXPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_IFC_EXPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_XGL_EXPORTER;ASSIMP_BUILD_NO_FBX_IMPORTER;ASSIMP_BUILD_NO_FBX_EXPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_Q3D_EXPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_EXPORTER;ASSIMP_BUILD_NO_RAW_IMPORTER;ASSIMP_BUILD_NO_RAW_EXPORTER;ASSIMP_BUILD_NO_SIB_IMPORTER;ASSIMP_BUILD_NO_SIB_EXPORTER;ASSIMP_BUILD_NO_SMD_IMPORTER;ASSIMP_BUILD_NO_SMD_EXPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_STL_EXPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_EXPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_3D_EXPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_X_EXPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;ASSIMP_BUILD_NO_X3D_EXPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_3MF_EXPORTER;ASSIMP_BUILD_NO_MMD_IMPORTER;ASSIMP_BUILD_NO_MMD_EXPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;CMAKE_INTDIR=\"MinSizeRel\";assimp_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\..\bin\lib\MinSizeRel\zlibstatic.lib;..\..\..\..\bin\lib\MinSizeRel\IrrXML.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/bin/lib/MinSizeRel/assimp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/bin/bin/MinSizeRel/assimp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_EXPORT;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_AMF_EXPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_AC_EXPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_ASE_EXPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_EXPORTER;ASSIMP_BUILD_NO_ASSXML_IMPORTER;ASSIMP_BUILD_NO_ASSXML_EXPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_B3D_EXPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_BVH_EXPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_COLLADA_EXPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_DXF_EXPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_CSM_EXPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_HMP_EXPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_EXPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRR_EXPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_LWO_EXPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_LWS_EXPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MDC_EXPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_NFF_EXPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_NDO_EXPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_OFF_EXPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_OGRE_EXPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_EXPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_PLY_EXPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_MS3D_EXPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_COB_EXPORTER;ASSIMP_BUILD_NO_BLEND_IMPORTER;ASSIMP_BUILD_NO_BLEND_EXPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_IFC_EXPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_XGL_EXPORTER;ASSIMP_BUILD_NO_FBX_IMPORTER;ASSIMP_BUILD_NO_FBX_EXPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_Q3D_EXPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_EXPORTER;ASSIMP_BUILD_NO_RAW_IMPORTER;ASSIMP_BUILD_NO_RAW_EXPORTER;ASSIMP_BUILD_NO_SIB_IMPORTER;ASSIMP_BUILD_NO_SIB_EXPORTER;ASSIMP_BUILD_NO_SMD_IMPORTER;ASSIMP_BUILD_NO_SMD_EXPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_STL_EXPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_EXPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_3D_EXPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_X_EXPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;ASSIMP_BUILD_NO_X3D_EXPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_3MF_EXPORTER;ASSIMP_BUILD_NO_MMD_IMPORTER;ASSIMP_BUILD_NO_MMD_EXPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;CMAKE_INTDIR="RelWithDebInfo";assimp_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WIN32_LEAN_AND_MEAN;OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_EXPORT;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_AMF_EXPORTER;ASSIMP_BUILD_NO_AC_IMPORTER;ASSIMP_BUILD_NO_AC_EXPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_ASE_EXPORTER;ASSIMP_BUILD_NO_ASSBIN_IMPORTER;ASSIMP_BUILD_NO_ASSBIN_EXPORTER;ASSIMP_BUILD_NO_ASSXML_IMPORTER;ASSIMP_BUILD_NO_ASSXML_EXPORTER;ASSIMP_BUILD_NO_B3D_IMPORTER;ASSIMP_BUILD_NO_B3D_EXPORTER;ASSIMP_BUILD_NO_BVH_IMPORTER;ASSIMP_BUILD_NO_BVH_EXPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_COLLADA_EXPORTER;ASSIMP_BUILD_NO_DXF_IMPORTER;ASSIMP_BUILD_NO_DXF_EXPORTER;ASSIMP_BUILD_NO_CSM_IMPORTER;ASSIMP_BUILD_NO_CSM_EXPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_HMP_EXPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_EXPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRR_EXPORTER;ASSIMP_BUILD_NO_LWO_IMPORTER;ASSIMP_BUILD_NO_LWO_EXPORTER;ASSIMP_BUILD_NO_LWS_IMPORTER;ASSIMP_BUILD_NO_LWS_EXPORTER;ASSIMP_BUILD_NO_MDC_IMPORTER;ASSIMP_BUILD_NO_MDC_EXPORTER;ASSIMP_BUILD_NO_NFF_IMPORTER;ASSIMP_BUILD_NO_NFF_EXPORTER;ASSIMP_BUILD_NO_NDO_IMPORTER;ASSIMP_BUILD_NO_NDO_EXPORTER;ASSIMP_BUILD_NO_OFF_IMPORTER;ASSIMP_BUILD_NO_OFF_EXPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_OGRE_EXPORTER;ASSIMP_BUILD_NO_OPENGEX_IMPORTER;ASSIMP_BUILD_NO_OPENGEX_EXPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_PLY_EXPORTER;ASSIMP_BUILD_NO_MS3D_IMPORTER;ASSIMP_BUILD_NO_MS3D_EXPORTER;ASSIMP_BUILD_NO_COB_IMPORTER;ASSIMP_BUILD_NO_COB_EXPORTER;ASSIMP_BUILD_NO_BLEND_IMPORTER;ASSIMP_BUILD_NO_BLEND_EXPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_IFC_EXPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_XGL_EXPORTER;ASSIMP_BUILD_NO_FBX_IMPORTER;ASSIMP_BUILD_NO_FBX_EXPORTER;ASSIMP_BUILD_NO_Q3D_IMPORTER;ASSIMP_BUILD_NO_Q3D_EXPORTER;ASSIMP_BUILD_NO_Q3BSP_IMPORTER;ASSIMP_BUILD_NO_Q3BSP_EXPORTER;ASSIMP_BUILD_NO_RAW_IMPORTER;ASSIMP_BUILD_NO_RAW_EXPORTER;ASSIMP_BUILD_NO_SIB_IMPORTER;ASSIMP_BUILD_NO_SIB_EXPORTER;ASSIMP_BUILD_NO_SMD_IMPORTER;ASSIMP_BUILD_NO_SMD_EXPORTER;ASSIMP_BUILD_NO_STL_IMPORTER;ASSIMP_BUILD_NO_STL_EXPORTER;ASSIMP_BUILD_NO_TERRAGEN_IMPORTER;ASSIMP_BUILD_NO_TERRAGEN_EXPORTER;ASSIMP_BUILD_NO_3D_IMPORTER;ASSIMP_BUILD_NO_3D_EXPORTER;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_X_EXPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;ASSIMP_BUILD_NO_X3D_EXPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_3MF_EXPORTER;ASSIMP_BUILD_NO_MMD_IMPORTER;ASSIMP_BUILD_NO_MMD_EXPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;CMAKE_INTDIR=\"RelWithDebInfo\";assimp_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\.;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\rapidjson\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\unzip;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\irrXML;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..\contrib\openddlparser\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\..\..\bin\lib\RelWithDebInfo\zlibstatic.lib;..\..\..\..\bin\lib\RelWithDebInfo\IrrXML.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/bin/lib/RelWithDebInfo/assimp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/bin/bin/RelWithDebInfo/assimp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/framework/lib/assimp/code/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/coursework" "-BC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework" --check-stamp-file "C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/framework_build/lib/assimp/code/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\cmake-modules\FindRT.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\code\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/framework/lib/assimp/code/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/coursework" "-BC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework" --check-stamp-file "C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/framework_build/lib/assimp/code/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\cmake-modules\FindRT.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\code\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/framework/lib/assimp/code/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/coursework" "-BC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework" --check-stamp-file "C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/framework_build/lib/assimp/code/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\cmake-modules\FindRT.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\code\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/framework/lib/assimp/code/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/coursework" "-BC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework" --check-stamp-file "C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/framework_build/lib/assimp/code/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\cmake-modules\FindRT.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\code\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Assimp.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\fast_atof.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\qnan.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BaseImporter.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BaseImporter.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BaseProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BaseProcess.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Importer.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScenePrivate.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\PostStepRegistry.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ImporterRegistry.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ByteSwapper.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DefaultProgressHandler.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DefaultIOStream.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DefaultIOSystem.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CInterfaceIOWrapper.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CInterfaceIOWrapper.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Hash.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Importer.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\IFF.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MemoryIOWrapper.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ParsingUtils.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StreamReader.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StreamWriter.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StringComparison.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StringUtils.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SGSpatialSort.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SGSpatialSort.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\VertexTriangleAdjacency.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\VertexTriangleAdjacency.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenericProperty.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SpatialSort.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SpatialSort.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SceneCombiner.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScenePreprocessor.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScenePreprocessor.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SkeletonMeshBuilder.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SkeletonMeshBuilder.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SplitByBoneCountProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SplitByBoneCountProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScaleProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScaleProcess.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SmoothingGroups.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StandardShapes.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StandardShapes.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TargetAnimation.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TargetAnimation.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveComments.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveComments.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Subdivision.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Subdivision.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\scene.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Vertex.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\LineSplitter.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TinyFormatter.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Profiler.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\LogAux.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Bitmap.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Bitmap.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\XMLTools.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Version.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\IOStreamBuffer.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CreateAnimMesh.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CreateAnimMesh.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\DefaultLogger.hpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\LogStream.hpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Logger.hpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\NullLogger.hpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Win32DebugLogStream.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DefaultLogger.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FileLogStream.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StdOStreamLogStream.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Exporter.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\AssimpCExport.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BlobIOSystem.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CalcTangentsProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CalcTangentsProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ComputeUVMappingProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ComputeUVMappingProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ConvertToLHProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ConvertToLHProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindDegenerates.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindDegenerates.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindInstancesProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindInstancesProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindInvalidDataProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindInvalidDataProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FixNormalsStep.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FixNormalsStep.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenFaceNormalsProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenFaceNormalsProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenVertexNormalsProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenVertexNormalsProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\PretransformVertices.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\PretransformVertices.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ImproveCacheLocality.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ImproveCacheLocality.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\JoinVerticesProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\JoinVerticesProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\LimitBoneWeightsProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\LimitBoneWeightsProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveRedundantMaterials.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveRedundantMaterials.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveVCProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveVCProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SortByPTypeProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SortByPTypeProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SplitLargeMeshes.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SplitLargeMeshes.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TextureTransform.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TextureTransform.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TriangulateProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TriangulateProcess.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ValidateDataStructure.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ValidateDataStructure.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\OptimizeGraph.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\OptimizeGraph.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\OptimizeMeshes.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\OptimizeMeshes.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DeboneProcess.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DeboneProcess.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ProcessHelper.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ProcessHelper.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\PolyTools.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MakeVerboseFormat.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MakeVerboseFormat.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MaterialSystem.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MaterialSystem.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StepExporter.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StepExporter.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSConverter.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSHelper.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSLoader.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSLoader.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSExporter.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSExporter.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD2FileData.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD2Loader.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD2Loader.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD2NormalTable.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD3FileData.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD3Loader.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD3Loader.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD5Loader.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD5Loader.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD5Parser.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD5Parser.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLDefaultColorMap.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLFileData.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLLoader.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLLoader.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLMaterialLoader.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileData.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileImporter.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileImporter.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileMtlImporter.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileMtlImporter.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileParser.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileParser.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjTools.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjExporter.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjExporter.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFAsset.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFAsset.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFAssetWriter.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFAssetWriter.inl" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFImporter.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFImporter.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFExporter.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFExporter.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Asset.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Asset.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2AssetWriter.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2AssetWriter.inl" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Importer.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Importer.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Exporter.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Exporter.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\irrXMLWrapper.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\crypt.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\ioapi.c" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\ioapi.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\unzip.c" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\unzip.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\common\shapes.cc" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\common\shapes.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\common\utils.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.cc" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\cdt.cc" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\cdt.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\sweep.cc" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\sweep.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.cc" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\clipper\clipper.hpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\clipper\clipper.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\OpenDDLParser.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\DDLNode.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\OpenDDLCommon.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\OpenDDLExport.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\Value.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\OpenDDLStream.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLParser.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLParserUtils.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLCommon.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLExport.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLStream.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\DDLNode.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\Value.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcAdjacencyInfo.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcArithmeticCodec.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcArithmeticCodec.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcBinaryStream.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcCommon.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDVEncodeParams.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVectorDecoder.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVectorDecoder.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVectorEncoder.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVectorEncoder.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVector.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcFIFO.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcIndexedFaceSet.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcIndexedFaceSet.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCDecoder.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCDecoder.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCEncodeParams.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCEncoder.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCEncoder.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTimer.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTools.cpp" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleFans.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleFans.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleListDecoder.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleListDecoder.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleListEncoder.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleListEncoder.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcVector.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcVector.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zip\src\miniz.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zip\src\zip.c" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zip\src\zip.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\anim.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\ai_assert.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\camera.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\color4.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\color4.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include\assimp\config.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\defs.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Defines.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\cfileio.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\light.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\material.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\material.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\matrix3x3.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\matrix3x3.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\matrix4x4.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\matrix4x4.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\mesh.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\postprocess.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\quaternion.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\quaternion.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\scene.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\metadata.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\texture.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\types.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\vector2.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\vector2.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\vector3.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\vector3.inl" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\version.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\cimport.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\importerdesc.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Importer.hpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\ProgressHandler.hpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\IOStream.hpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\IOSystem.hpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\cexport.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Exporter.hpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\DefaultIOStream.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\DefaultIOSystem.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\SceneCombiner.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Compiler\pushpack1.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Compiler\poppack1.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Compiler\pstdint.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\ZERO_CHECK.vcxproj">
+      <Project>{F695EC0B-F41A-3835-BF05-842A4E1CD6CB}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\irrXML\IrrXML.vcxproj">
+      <Project>{975A9167-8EEE-3611-A583-E3F0FED5C736}</Project>
+      <Name>IrrXML</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib\zlibstatic.vcxproj">
+      <Project>{1CEFE834-CFF8-3D7E-9B50-2F163FF8EAB2}</Project>
+      <Name>zlibstatic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

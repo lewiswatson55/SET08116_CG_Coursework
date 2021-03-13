@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\CMakeFiles\64b98c6b44cc32c4a476802116c3ac43\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{793DC671-ACEF-331D-9322-72EB0287C3C8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

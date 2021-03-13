@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{839036E9-6472-377C-B8EF-6B3D26A7F08A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>enu_graphics_framework</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\bin\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">enu_graphics_framework.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">enu_graphics_framework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\bin\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">enu_graphics_framework.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">enu_graphics_framework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\bin\lib\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">enu_graphics_framework.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">enu_graphics_framework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\bin\lib\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">enu_graphics_framework.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">enu_graphics_framework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;GLFW_DLL;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GLFW_DLL;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glfw\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glew\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\glm;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include;C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/framework/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/coursework" "-BC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework" --check-stamp-file "C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/framework_build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/framework/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/coursework" "-BC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework" --check-stamp-file "C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/framework_build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/framework/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/coursework" "-BC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework" --check-stamp-file "C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/framework_build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/framework/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/set08116/labs/coursework" "-BC:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework" --check-stamp-file "C:/Users/lewis/OneDrive - Edinburgh Napier University/Modules/Second Year/2 CG/SET08116_CG_Coursework/framework_build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\app.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\app.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\arc_ball_camera.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\arc_ball_camera.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\camera.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\chase_camera.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\chase_camera.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\cubemap.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\cubemap.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\depth_buffer.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\depth_buffer.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\directional_light.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\directional_light.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\effect.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\effect.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\frame_buffer.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\frame_buffer.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\free_camera.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\free_camera.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\geometry.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\geometry.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\geometry_builder.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\geometry_builder.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\graphics_framework.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\material.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\mesh.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\point_light.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\renderer.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\renderer.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\shadow_map.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\shadow_map.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\spot_light.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\stdafx.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\stdafx.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\target_camera.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\target_camera.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\terrain.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\terrain.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\texture.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\texture.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\transform.h" />
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\util.cpp" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\src\util.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\stb_image.h" />
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\stb_image_write.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\ZERO_CHECK.vcxproj">
+      <Project>{F695EC0B-F41A-3835-BF05-842A4E1CD6CB}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\irrXML\IrrXML.vcxproj">
+      <Project>{975A9167-8EEE-3611-A583-E3F0FED5C736}</Project>
+      <Name>IrrXML</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\code\assimp.vcxproj">
+      <Project>{38959EBA-B2C4-363C-B3D5-92A5EC9E0638}</Project>
+      <Name>assimp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\glfw\src\glfw.vcxproj">
+      <Project>{258E4BE1-2E37-3D67-947A-019E8E571207}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\glew\libglew_shared.vcxproj">
+      <Project>{801DE519-E6DA-37F8-9E9E-765CD9E0A0B3}</Project>
+      <Name>libglew_shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\contrib\zlib\zlibstatic.vcxproj">
+      <Project>{1CEFE834-CFF8-3D7E-9B50-2F163FF8EAB2}</Project>
+      <Name>zlibstatic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

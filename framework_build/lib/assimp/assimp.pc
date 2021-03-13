@@ -1,0 +1,11 @@
+prefix=C:/Program Files (x86)/set08116_coursework
+exec_prefix=C:/Program Files (x86)/set08116_coursework/
+libdir=C:/Program Files (x86)/set08116_coursework/lib
+includedir=C:/Program Files (x86)/set08116_coursework/include
+
+Name: set08116_coursework
+Description: Import various well-known 3D model formats in an uniform manner.
+Version: 4.1.0
+Libs: -L${libdir} -lassimp
+Libs.private:  
+Cflags: -I${includedir}

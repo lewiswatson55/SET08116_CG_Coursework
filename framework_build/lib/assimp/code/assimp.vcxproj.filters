@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Assimp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BaseImporter.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BaseProcess.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\PostStepRegistry.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ImporterRegistry.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DefaultIOStream.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DefaultIOSystem.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CInterfaceIOWrapper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Importer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SGSpatialSort.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\VertexTriangleAdjacency.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SpatialSort.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SceneCombiner.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScenePreprocessor.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SkeletonMeshBuilder.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SplitByBoneCountProcess.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScaleProcess.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StandardShapes.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TargetAnimation.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveComments.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Subdivision.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\scene.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Bitmap.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Version.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CreateAnimMesh.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DefaultLogger.cpp">
+      <Filter>Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Exporter.cpp">
+      <Filter>Exporter</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\AssimpCExport.cpp">
+      <Filter>Exporter</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CalcTangentsProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ComputeUVMappingProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ConvertToLHProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindDegenerates.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindInstancesProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindInvalidDataProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FixNormalsStep.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenFaceNormalsProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenVertexNormalsProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\PretransformVertices.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ImproveCacheLocality.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\JoinVerticesProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\LimitBoneWeightsProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveRedundantMaterials.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveVCProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SortByPTypeProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SplitLargeMeshes.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TextureTransform.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TriangulateProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ValidateDataStructure.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\OptimizeGraph.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\OptimizeMeshes.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DeboneProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ProcessHelper.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MakeVerboseFormat.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MaterialSystem.cpp">
+      <Filter>MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StepExporter.cpp">
+      <Filter>Step</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSConverter.cpp">
+      <Filter>3DS</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSLoader.cpp">
+      <Filter>3DS</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSExporter.cpp">
+      <Filter>3DS</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD2Loader.cpp">
+      <Filter>MD2</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD3Loader.cpp">
+      <Filter>MD3</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD5Loader.cpp">
+      <Filter>MD5</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD5Parser.cpp">
+      <Filter>MD5</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLLoader.cpp">
+      <Filter>MDL</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLMaterialLoader.cpp">
+      <Filter>MDL</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileImporter.cpp">
+      <Filter>OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileMtlImporter.cpp">
+      <Filter>OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileParser.cpp">
+      <Filter>OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjExporter.cpp">
+      <Filter>OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFImporter.cpp">
+      <Filter>GLTF</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFExporter.cpp">
+      <Filter>GLTF</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Importer.cpp">
+      <Filter>GLTF</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Exporter.cpp">
+      <Filter>GLTF</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\ioapi.c">
+      <Filter>unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\unzip.c">
+      <Filter>unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\common\shapes.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\cdt.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\sweep.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\clipper\clipper.cpp">
+      <Filter>Clipper</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\OpenDDLParser.cpp">
+      <Filter>openddl_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\DDLNode.cpp">
+      <Filter>openddl_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\OpenDDLCommon.cpp">
+      <Filter>openddl_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\OpenDDLExport.cpp">
+      <Filter>openddl_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\Value.cpp">
+      <Filter>openddl_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\code\OpenDDLStream.cpp">
+      <Filter>openddl_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcArithmeticCodec.cpp">
+      <Filter>open3dgc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVectorDecoder.cpp">
+      <Filter>open3dgc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVectorEncoder.cpp">
+      <Filter>open3dgc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTools.cpp">
+      <Filter>open3dgc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleFans.cpp">
+      <Filter>open3dgc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zip\src\zip.c">
+      <Filter>ziplib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\fast_atof.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\qnan.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BaseImporter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BaseProcess.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Importer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScenePrivate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ByteSwapper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DefaultProgressHandler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CInterfaceIOWrapper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Hash.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\IFF.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MemoryIOWrapper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ParsingUtils.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StreamReader.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StreamWriter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StringComparison.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StringUtils.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SGSpatialSort.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\VertexTriangleAdjacency.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenericProperty.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SpatialSort.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScenePreprocessor.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SkeletonMeshBuilder.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SplitByBoneCountProcess.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ScaleProcess.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SmoothingGroups.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StandardShapes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TargetAnimation.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveComments.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Subdivision.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Vertex.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\LineSplitter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TinyFormatter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Profiler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\LogAux.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Bitmap.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\XMLTools.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\IOStreamBuffer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CreateAnimMesh.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\DefaultLogger.hpp">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\LogStream.hpp">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Logger.hpp">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\NullLogger.hpp">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\Win32DebugLogStream.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FileLogStream.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StdOStreamLogStream.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\BlobIOSystem.h">
+      <Filter>Exporter</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CalcTangentsProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ComputeUVMappingProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ConvertToLHProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindDegenerates.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindInstancesProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FindInvalidDataProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\FixNormalsStep.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenFaceNormalsProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\GenVertexNormalsProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\PretransformVertices.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ImproveCacheLocality.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\JoinVerticesProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\LimitBoneWeightsProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveRedundantMaterials.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\RemoveVCProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SortByPTypeProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\SplitLargeMeshes.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TextureTransform.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\TriangulateProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ValidateDataStructure.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\OptimizeGraph.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\OptimizeMeshes.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\DeboneProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ProcessHelper.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\PolyTools.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MakeVerboseFormat.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MaterialSystem.h">
+      <Filter>MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\StepExporter.h">
+      <Filter>Step</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSHelper.h">
+      <Filter>3DS</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSLoader.h">
+      <Filter>3DS</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\3DSExporter.h">
+      <Filter>3DS</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD2FileData.h">
+      <Filter>MD2</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD2Loader.h">
+      <Filter>MD2</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD2NormalTable.h">
+      <Filter>MD2</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD3FileData.h">
+      <Filter>MD3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD3Loader.h">
+      <Filter>MD3</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD5Loader.h">
+      <Filter>MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MD5Parser.h">
+      <Filter>MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLDefaultColorMap.h">
+      <Filter>MDL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLFileData.h">
+      <Filter>MDL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\MDLLoader.h">
+      <Filter>MDL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileData.h">
+      <Filter>OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileImporter.h">
+      <Filter>OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileMtlImporter.h">
+      <Filter>OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjFileParser.h">
+      <Filter>OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjTools.h">
+      <Filter>OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\ObjExporter.h">
+      <Filter>OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFAsset.h">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFAsset.inl">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFAssetWriter.h">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFAssetWriter.inl">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFImporter.h">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTFExporter.h">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Asset.h">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Asset.inl">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2AssetWriter.h">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2AssetWriter.inl">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Importer.h">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\glTF2Exporter.h">
+      <Filter>GLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\irrXMLWrapper.h">
+      <Filter>IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\crypt.h">
+      <Filter>unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\ioapi.h">
+      <Filter>unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\unzip\unzip.h">
+      <Filter>unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\common\shapes.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\common\utils.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\cdt.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\sweep.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\clipper\clipper.hpp">
+      <Filter>Clipper</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLParser.h">
+      <Filter>openddl_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLParserUtils.h">
+      <Filter>openddl_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLCommon.h">
+      <Filter>openddl_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLExport.h">
+      <Filter>openddl_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\OpenDDLStream.h">
+      <Filter>openddl_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\DDLNode.h">
+      <Filter>openddl_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\openddlparser\include\openddlparser\Value.h">
+      <Filter>openddl_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcAdjacencyInfo.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcArithmeticCodec.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcBinaryStream.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcCommon.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDVEncodeParams.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVectorDecoder.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVectorEncoder.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcDynamicVector.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcFIFO.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcIndexedFaceSet.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcIndexedFaceSet.inl">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCDecoder.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCDecoder.inl">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCEncodeParams.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCEncoder.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcSC3DMCEncoder.inl">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTimer.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleFans.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleListDecoder.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleListDecoder.inl">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleListEncoder.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcTriangleListEncoder.inl">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcVector.h">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\Open3DGC\o3dgcVector.inl">
+      <Filter>open3dgc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zip\src\miniz.h">
+      <Filter>ziplib</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\contrib\zip\src\zip.h">
+      <Filter>ziplib</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\anim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\ai_assert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\color4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\color4.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\framework_build\lib\assimp\include\assimp\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\cfileio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\material.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\matrix3x3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\matrix3x3.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\matrix4x4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\matrix4x4.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\postprocess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\quaternion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\quaternion.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\metadata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\vector2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\vector2.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\vector3.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\cimport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\importerdesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Importer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\ProgressHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\IOStream.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\IOSystem.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\cexport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Exporter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\DefaultIOStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\DefaultIOSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\SceneCombiner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Compiler\pushpack1.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Compiler\poppack1.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\include\assimp\Compiler\pstdint.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\framework\lib\assimp\code\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="3DS">
+      <UniqueIdentifier>{EECBDB2F-D45A-3C80-ABD6-3BDFDEFA7628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clipper">
+      <UniqueIdentifier>{07F29793-7945-3669-B3B4-CB0399376D9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{47DA514A-FBC0-38EE-8BFB-61F939DA32EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compiler">
+      <UniqueIdentifier>{ABD6C02C-E809-3960-B538-EF3B9188CC45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exporter">
+      <UniqueIdentifier>{F43AFAFF-C9F1-35C4-9F86-71BFBDCC8438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GLTF">
+      <UniqueIdentifier>{3957B068-B63C-3F69-8B22-9A6EAA3DBC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C4880166-3759-3BB6-9F20-E3DC933A242A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IrrXML">
+      <UniqueIdentifier>{0BA2C852-DCD5-34DC-AA73-E9EC02C4B118}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logging">
+      <UniqueIdentifier>{5FA3E14D-6E9C-3744-9389-33CBFD6FE1DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MD2">
+      <UniqueIdentifier>{CE5439E1-C8D3-34BC-8FFC-E95CFD101BFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MD3">
+      <UniqueIdentifier>{20CE8946-8F61-3E26-8587-BC2BDBD9BFE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MD5">
+      <UniqueIdentifier>{CEC93736-0498-3D0A-8660-E6FCE201B060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDL">
+      <UniqueIdentifier>{8C63677E-512E-3393-AFC5-98A1EACF7FA8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MaterialSystem">
+      <UniqueIdentifier>{94719619-D88A-35E0-9FC1-7B2CEE212C10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OBJ">
+      <UniqueIdentifier>{5D70019D-1047-3655-88EB-16E8C2329686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Poly2Tri">
+      <UniqueIdentifier>{83E65F87-46EF-3119-B351-981B13E0AE85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcessing">
+      <UniqueIdentifier>{9AB8537B-9C80-3851-82B7-B4642E4ADD0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{27F52EEC-EB4D-31DE-AFE7-8D6E1BD47B2E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Step">
+      <UniqueIdentifier>{789E51EA-C46F-30B5-AC17-4A58A7C9E502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="open3dgc">
+      <UniqueIdentifier>{9FE1E8D3-D92E-3F8B-A44C-CAB1B8EF152C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="openddl_parser">
+      <UniqueIdentifier>{5AA23946-0727-3E10-B50C-E6107ED3E18D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unzip">
+      <UniqueIdentifier>{648824C7-3B55-3B76-9826-0E0CBF7D99ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ziplib">
+      <UniqueIdentifier>{FD4A7670-E67F-313E-9D84-7C724960C59F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
