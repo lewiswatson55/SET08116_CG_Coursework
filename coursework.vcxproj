@@ -325,7 +325,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\set08116\labs\coursework\src\main.cpp" />
+    <ClCompile Include=".\coursework\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\lewis\OneDrive - Edinburgh Napier University\Modules\Second Year\2 CG\SET08116_CG_Coursework\ZERO_CHECK.vcxproj">
