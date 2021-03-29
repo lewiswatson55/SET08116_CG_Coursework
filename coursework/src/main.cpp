@@ -335,7 +335,7 @@ bool update(float delta_time) {
         ccam.set_projection(quarter_pi<float>(), renderer::get_screen_aspect(), 0.1f, 1000.0f);
         ccam.update(delta_time);
     }
-
+    cout << 1 / delta_time << endl;
     return true;
 }
 
