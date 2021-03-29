@@ -19,6 +19,11 @@ directional_light light;
 texture tex;
 effect leff;
 
+//Skybox Init
+effect sky_eff;
+mesh skybox;
+cubemap cube_map;
+
 //Cam Inits
 GLFWwindow* window;
 target_camera tcam;
@@ -51,6 +56,17 @@ bool load_content() {
 
    //Load Default Texture
    textures["default"] = texture("res/textures/check_1.png");
+
+  //Create Skybox Mesh, then 
+  skybox = mesh(geometry_builder::create_box(vec3(4.5f, 3.0f, 4.0f)));
+  skybox.get_transform().scale = vec3(100.0f, 100.0f, 100.0f);
+  //skybox.get_transform().translate(vec3(0.0f,-5000.0f,0.0f));
+
+  //Load Skybox Assets 
+  array<string, 6> filenames = { "res/textures/sahara_ft.jpg", "res/textures/sahara_bk.jpg", "res/textures/sahara_up.jpg",
+                              "res/textures/sahara_dn.jpg", "res/textures/sahara_rt.jpg", "res/textures/sahara_lf.jpg" };
+  cube_map = cubemap(filenames);
+
 
   // Create plane mesh
   meshes["plane"] = mesh(geometry_builder::create_plane());
@@ -244,6 +260,12 @@ bool load_content() {
   // Build effects
   leff.build(); //Spot and Point Lighting
 
+  //Load and Build Skymap Shader
+  sky_eff.add_shader("./res/shaders/skybox.vert", GL_VERTEX_SHADER);
+  sky_eff.add_shader("./res/shaders/skybox.frag", GL_FRAGMENT_SHADER);
+  sky_eff.build();
+
+
   // Set camera properties
   cam.set_position(vec3(0.0f, 10.0f, 110.0f));
   cam.set_target(vec3(0.0f, 0.0f, 0.0f));
@@ -322,12 +344,14 @@ bool update(float delta_time) {
     cursor_x = current_x;
     cursor_y = current_y;
     // *********************************
+
     }
     else if (current_cam == 1) {
         tcam.set_position(vec3(50.0f, 5.0f, 110.0f));
         tcam.set_target(vec3(0.0f, 30.0f, 0.0f));
         tcam.set_projection(quarter_pi<float>(), renderer::get_screen_aspect(), 0.1f, 1000.0f);
         tcam.update(delta_time);
+
     }
     else if (current_cam == 2) {
         ccam.set_position(vec3(0.0f, 4.0f, 60.0f));
@@ -335,11 +359,62 @@ bool update(float delta_time) {
         ccam.set_projection(quarter_pi<float>(), renderer::get_screen_aspect(), 0.1f, 1000.0f);
         ccam.update(delta_time);
     }
+
     cout << 1 / delta_time << endl;
     return true;
 }
 
 bool render() {
+
+    // ********Render Skymap***********
+
+    //Disable required gl
+    glDisable(GL_CULL_FACE);
+    glDisable(GL_DEPTH_TEST);
+    glDepthMask(GL_FALSE);
+
+    //Bind Sky Effect
+    renderer::bind(sky_eff);
+
+    // Calculate MVP for the skybox
+    auto M = skybox.get_transform().get_transform_matrix();
+    auto V = tcam.get_view();
+    auto P = tcam.get_projection();
+    auto MVP = P * V * M;
+
+    if (current_cam == 0) {
+        // Calculate MVP for the skybox
+        M = skybox.get_transform().get_transform_matrix();
+        V = cam.get_view();
+        P = cam.get_projection();
+        MVP = P * V * M;
+    }
+    else if (current_cam == 2) {
+        // Calculate MVP for the skybox
+        M = skybox.get_transform().get_transform_matrix();
+        V = ccam.get_view();
+        P = ccam.get_projection();
+        MVP = P * V * M;
+    }
+
+    // Set MVP matrix uniform
+    MVP = P * V * scale(mat4(1.0f), vec3(100.0f));
+    glUniformMatrix4fv(sky_eff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
+
+    // Set cubemap uniform
+    renderer::bind(cube_map, 0);
+    glUniform1i(sky_eff.get_uniform_location("cubemap"), 0);
+
+    // Render skybox
+    renderer::render(skybox);
+
+    // Enable depth test,depth mask,face culling
+    glEnable(GL_CULL_FACE);
+    glEnable(GL_DEPTH_TEST);
+    glDepthMask(GL_TRUE);
+
+    //*********************************
+
     // Render meshes 
     for (auto &e : meshes) {
         auto m = e.second;
@@ -365,6 +440,7 @@ bool render() {
             // Set MVP matrix uniform
             //glUniformMatrix4fv(eff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
             glUniformMatrix4fv(leff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
+
         }
         else if (current_cam == 1) {
             auto M = m.get_transform().get_transform_matrix();
@@ -381,6 +457,7 @@ bool render() {
             // Set N matrix uniform - remember - 3x3 matrix  for LEFF
             mat3 N = m.get_transform().get_normal_matrix();
             glUniformMatrix3fv(leff.get_uniform_location("N"), 1, GL_FALSE, value_ptr(N));
+
         }
         else if (current_cam == 2) {
             auto M = m.get_transform().get_transform_matrix();
@@ -400,6 +477,7 @@ bool render() {
             // Set MVP matrix uniform
             //glUniformMatrix4fv(eff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
             glUniformMatrix4fv(leff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
+
         }
 
         //Lighting 
