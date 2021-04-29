@@ -63,12 +63,11 @@ bool load_content() {
   //skybox.get_transform().translate(vec3(0.0f,100.0f,0.0f));
 
   //Load Skybox Assets 
- // array<string, 6> filenames = { "res/textures/lewisskymap_ft.jpg", "res/textures/lewisskymap_bk.jpg", "res/textures/lewisskymap_up.jpg",
- //                             "res/textures/lewisskymap_dn.jpg", "res/textures/lewisskymap_rt.jpg", "res/textures/lewisskymap_lf.jpg" };
+  array<string, 6> filenames = { "res/textures/lewisskymap_ft.jpg", "res/textures/lewisskymap_bk.jpg", "res/textures/lewisskymap_up.jpg",
+                              "res/textures/lewisskymap_dn.jpg", "res/textures/lewisskymap_rt.jpg", "res/textures/lewisskymap_lf.jpg" };
 
-  array<string, 6> filenames = { "res/textures/sahara_ft.jpg", "res/textures/sahara_bk.jpg", "res/textures/sahara_up.jpg",
-      "res/textures/sahara_dn.jpg", "res/textures/sahara_rt.jpg", "res/textures/sahara_lf.jpg"
-};
+  //array<string, 6> filenames = { "res/textures/sahara_ft.jpg", "res/textures/sahara_bk.jpg", "res/textures/sahara_up.jpg",
+    //  "res/textures/sahara_dn.jpg", "res/textures/sahara_rt.jpg", "res/textures/sahara_lf.jpg"};
 
   cube_map = cubemap(filenames);
 
@@ -142,9 +141,9 @@ bool load_content() {
   meshes["temple"].get_transform().translate(vec3(-7.0f, 0.0f, -50.0f)); 
 
   materials["temple"].set_diffuse(vec4(0.5f, 0.5f, 0.5f, 0.0f));
-  materials["temple"].set_emissive(vec4(0.0f, 0.0f, 0.0f, 0.0f));
-  materials["temple"].set_shininess(1);
-  materials["temple"].set_specular(vec4(0.2f, 0.0f, 0.0f, 0.0f));
+  materials["temple"].set_emissive(vec4(0.005f, 0.0f, 0.0f, 0.0f));
+  materials["temple"].set_shininess(2);
+  materials["temple"].set_specular(vec4(0.1f, 0.1f, 0.1f, 1.0f));
   meshes["temple"].set_material(materials["temple"]);
 
 
@@ -239,10 +238,10 @@ bool load_content() {
   points[7].set_position(vec3(-10.0f, 6.5f, 68.0f));
 
   //Point Lights Red Properties
-  points[0].set_range(20);
-  points[0].set_light_colour(vec4(0.7f, 0.0f, 0.0f, 0.0f));
-  points[1].set_range(20);
-  points[1].set_light_colour(vec4(0.7f, 0.0f, 0.0f, 0.0f));
+  points[0].set_range(50);
+  points[0].set_light_colour(vec4(0.3f, 0.0f, 0.0f, 0.0f));
+  points[1].set_range(50);
+  points[1].set_light_colour(vec4(0.3f, 0.0f, 0.0f, 0.0f));
 
   //Spot Light Properties
   spots[0].set_position(vec3(2.0f, 10, -25));
@@ -259,7 +258,7 @@ bool load_content() {
   }
 
   //Lighting 
-  light.set_ambient_intensity(vec4(0.3f, 0.3f, 0.3f, 1.0f));
+  light.set_ambient_intensity(vec4(0.2f, 0.2f, 0.2f, 1.0f));
   light.set_light_colour(vec4(0.0f, 0.0f, 0.0f, 0.0f));
   light.set_direction(vec3(1, 1, -1));
 
