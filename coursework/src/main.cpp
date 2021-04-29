@@ -60,11 +60,16 @@ bool load_content() {
   //Create Skybox Mesh, then 
   skybox = mesh(geometry_builder::create_box(vec3(4.5f, 3.0f, 4.0f)));
   skybox.get_transform().scale = vec3(100.0f, 100.0f, 100.0f);
-  //skybox.get_transform().translate(vec3(0.0f,-5000.0f,0.0f));
+  //skybox.get_transform().translate(vec3(0.0f,100.0f,0.0f));
 
   //Load Skybox Assets 
+ // array<string, 6> filenames = { "res/textures/lewisskymap_ft.jpg", "res/textures/lewisskymap_bk.jpg", "res/textures/lewisskymap_up.jpg",
+ //                             "res/textures/lewisskymap_dn.jpg", "res/textures/lewisskymap_rt.jpg", "res/textures/lewisskymap_lf.jpg" };
+
   array<string, 6> filenames = { "res/textures/sahara_ft.jpg", "res/textures/sahara_bk.jpg", "res/textures/sahara_up.jpg",
-                              "res/textures/sahara_dn.jpg", "res/textures/sahara_rt.jpg", "res/textures/sahara_lf.jpg" };
+      "res/textures/sahara_dn.jpg", "res/textures/sahara_rt.jpg", "res/textures/sahara_lf.jpg"
+};
+
   cube_map = cubemap(filenames);
 
 
@@ -136,10 +141,10 @@ bool load_content() {
   meshes["temple"] = mesh(geometry("./res/models/TempleOptimised.obj"));
   meshes["temple"].get_transform().translate(vec3(-7.0f, 0.0f, -50.0f)); 
 
-  materials["temple"].set_diffuse(vec4(1.0f, 1.0f, 1.0f, 0.0f));
+  materials["temple"].set_diffuse(vec4(0.5f, 0.5f, 0.5f, 0.0f));
   materials["temple"].set_emissive(vec4(0.0f, 0.0f, 0.0f, 0.0f));
-  materials["temple"].set_shininess(10);
-  materials["temple"].set_specular(vec4(1.0f, 0.0f, 0.0f, 0.0f));
+  materials["temple"].set_shininess(1);
+  materials["temple"].set_specular(vec4(0.2f, 0.0f, 0.0f, 0.0f));
   meshes["temple"].set_material(materials["temple"]);
 
 
@@ -163,7 +168,7 @@ bool load_content() {
 
   //Set Balls Material - Fire
   materials["cultist_fire"].set_diffuse(vec4(1.0, 1.0, 1.0, 1.0));
-  materials["cultist_fire"].set_emissive(vec4(3.0, 0.0, 0.0, 1.0));
+  materials["cultist_fire"].set_emissive(vec4(1.0, 0.0, 0.0, 1.0));
   materials["cultist_fire"].set_shininess(10.0f);
   materials["cultist_fire"].set_specular(vec4(5.0, 0.0, 0.0, 0.0));
   meshes["cultist_fire"].set_material(materials["cultist_fire"]);
@@ -233,11 +238,11 @@ bool load_content() {
   points[6].set_position(vec3(-10.0f, 6.5f, 28.0f));
   points[7].set_position(vec3(-10.0f, 6.5f, 68.0f));
 
-  //Point Lights Properties
+  //Point Lights Red Properties
   points[0].set_range(20);
-  points[0].set_light_colour(vec4(0.5f, 0.0f, 0.0f, 0.0f));
+  points[0].set_light_colour(vec4(0.7f, 0.0f, 0.0f, 0.0f));
   points[1].set_range(20);
-  points[1].set_light_colour(vec4(0.5f, 0.0f, 0.0f, 0.0f));
+  points[1].set_light_colour(vec4(0.7f, 0.0f, 0.0f, 0.0f));
 
   //Spot Light Properties
   spots[0].set_position(vec3(2.0f, 10, -25));
@@ -249,13 +254,25 @@ bool load_content() {
   for (auto eb : spots)
   {
       eb.set_range(10);
-      eb.set_light_colour(vec4(200.0f, 200.0f, 200.0f, 200.0f));
-      eb.set_power(300);
+      eb.set_light_colour(vec4(0.0f, 0.0f, 0.0f, 1.0f));
+      eb.set_power(1);
   }
 
-  // Load in shader - Ignore shader name, isn't just the code from the multi light lab
-  leff.add_shader("./res/shaders/multi-light.vert", GL_VERTEX_SHADER);
-  leff.add_shader("./res/shaders/multi-light.frag", GL_FRAGMENT_SHADER);
+  //Lighting 
+  light.set_ambient_intensity(vec4(0.3f, 0.3f, 0.3f, 1.0f));
+  light.set_light_colour(vec4(0.0f, 0.0f, 0.0f, 0.0f));
+  light.set_direction(vec3(1, 1, -1));
+
+
+  // Shaders, multi frag shader variable and associated vert
+  leff.add_shader("./res/shaders/shader.vert", GL_VERTEX_SHADER);
+  vector<string> frag_shaders{ "./res/shaders/shader.frag", "./res/shaders/part_direction.frag",
+                            "./res/shaders/part_point.frag", "./res/shaders/part_spot.frag" };
+  leff.add_shader(frag_shaders, GL_FRAGMENT_SHADER);
+
+  //leff.add_shader("./res/shaders/multi-light.frag", GL_FRAGMENT_SHADER);
+  //leff.add_shader("./res/shaders/multi-light.vert", GL_VERTEX_SHADER);
+
 
   // Build effects
   leff.build(); //Spot and Point Lighting
@@ -339,6 +356,14 @@ bool update(float delta_time) {
 
     // Update the camera
     cam.update(delta_time);
+
+    // Set skybox position to camera position (camera in centre of skybox)
+    //skybox.get_transform().position = cam.get_position();
+
+
+   // if (glfwGetKey(renderer::get_window(), GLFW_KEY_W)) {
+       // skybox.get_transform().position += vec3(0.0f, 100.0f, 0.0f);
+    //}
 
     // Update cursor pos
     cursor_x = current_x;
@@ -475,21 +500,12 @@ bool render() {
             glUniform3f(leff.get_uniform_location("eye_pos"), eyeP.x, eyeP.y, eyeP.z);
 
             // Set MVP matrix uniform
-            //glUniformMatrix4fv(eff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
+            //glUniformMatrix4fv(eff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));      
             glUniformMatrix4fv(leff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
 
         }
 
-        //Lighting 
-        // ambient intensity (0.3, 0.3, 0.3)
-        light.set_ambient_intensity(vec4(0.3f, 0.3f, 0.3f, 0.0f));
-        // Light colour white
-        light.set_light_colour(vec4(0.05f, 0.05f, 0.05f, 1.0f));
-        // Light direction (1.0, 1.0, -1.0)
-        light.set_direction(vec3(1.0f, 1.0f, -1.0f));
-
-
-        // Bind material
+        // Bind material 
         material mm = m.get_material();
         renderer::bind(mm, "mat");
 
