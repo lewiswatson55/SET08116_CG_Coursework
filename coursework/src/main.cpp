@@ -18,6 +18,11 @@ directional_light light;
 //Shader Inits
 texture tex;
 effect leff;
+texture normal_map;
+
+//Shadows
+effect shadow_eff;
+shadow_map shadow;
 
 //Skybox Init
 effect sky_eff;
@@ -54,17 +59,23 @@ bool initialise() {
 
 bool load_content() {
 
+    // Load brick_normalmap.jpg texture
+    //normal_map = texture("./res/textures/old_normal_map.jpg");
+
+    // Create shadow map
+    shadow = shadow_map(renderer::get_screen_width(), renderer::get_screen_height());
+
    //Load Default Texture
-   textures["default"] = texture("res/textures/check_1.png");
+   textures["default"] = texture("./res/textures/check_1.png");
 
   //Create Skybox Mesh, then 
   skybox = mesh(geometry_builder::create_box(vec3(4.5f, 3.0f, 4.0f)));
   skybox.get_transform().scale = vec3(100.0f, 100.0f, 100.0f);
-  //skybox.get_transform().translate(vec3(0.0f,100.0f,0.0f));
+  //skybox.get_transform().translate(vec3(0.0f,100000000.0f,0.0f));
 
   //Load Skybox Assets 
-  array<string, 6> filenames = { "res/textures/lewisskymap_ft.jpg", "res/textures/lewisskymap_bk.jpg", "res/textures/lewisskymap_up.jpg",
-                              "res/textures/lewisskymap_dn.jpg", "res/textures/lewisskymap_rt.jpg", "res/textures/lewisskymap_lf.jpg" };
+  array<string, 6> filenames = { "./res/textures/lewisskymap_ft.jpg", "./res/textures/lewisskymap_bk.jpg", "./res/textures/lewisskymap_up.jpg",
+                              "./res/textures/lewisskymap_dn.jpg", "./res/textures/lewisskymap_rt.jpg", "./res/textures/lewisskymap_lf.jpg" };
 
   //array<string, 6> filenames = { "res/textures/sahara_ft.jpg", "res/textures/sahara_bk.jpg", "res/textures/sahara_up.jpg",
     //  "res/textures/sahara_dn.jpg", "res/textures/sahara_rt.jpg", "res/textures/sahara_lf.jpg"};
@@ -72,7 +83,7 @@ bool load_content() {
   cube_map = cubemap(filenames);
 
 
-  // Create plane mesh
+  // Create plane mesh 
   meshes["plane"] = mesh(geometry_builder::create_plane());
   vec3 sizePlane(1.5f, 2.0f, 2.0f);
   meshes["plane"].get_transform().scale = sizePlane;
@@ -266,20 +277,26 @@ bool load_content() {
   // Shaders, multi frag shader variable and associated vert
   leff.add_shader("./res/shaders/shader.vert", GL_VERTEX_SHADER);
   vector<string> frag_shaders{ "./res/shaders/shader.frag", "./res/shaders/part_direction.frag",
-                            "./res/shaders/part_point.frag", "./res/shaders/part_spot.frag" };
+                            "./res/shaders/part_point.frag", "./res/shaders/part_spot.frag", "./res/shaders/part_shadow.frag" };
   leff.add_shader(frag_shaders, GL_FRAGMENT_SHADER);
 
-  //leff.add_shader("./res/shaders/multi-light.frag", GL_FRAGMENT_SHADER);
+  //leff.add_shader("./res/shaders/multi-light.frag", GL_FRAGMENT_SHADER); 
   //leff.add_shader("./res/shaders/multi-light.vert", GL_VERTEX_SHADER);
 
 
-  // Build effects
+  // Build lights effect
   leff.build(); //Spot and Point Lighting
 
   //Load and Build Skymap Shader
   sky_eff.add_shader("./res/shaders/skybox.vert", GL_VERTEX_SHADER);
   sky_eff.add_shader("./res/shaders/skybox.frag", GL_FRAGMENT_SHADER);
   sky_eff.build();
+
+
+  //Shadows
+  shadow_eff.add_shader("./res/shaders/spot.vert", GL_VERTEX_SHADER);
+  shadow_eff.add_shader("./res/shaders/spot.frag", GL_FRAGMENT_SHADER);
+  shadow_eff.build();
 
 
   // Set camera properties
@@ -291,6 +308,16 @@ bool load_content() {
 
 
 bool update(float delta_time) {
+
+    // Press s to save
+    if (glfwGetKey(renderer::get_window(), 'x') == GLFW_PRESS)
+        shadow.buffer->save("C:\\Users\\lewis\\OneDrive - Edinburgh Napier University\\Modules\\Second Year\\2 CG\\test.png");
+
+    //SHADOWS
+    // Update the shadow map light_position from the spot light
+    shadow.light_position = spots[0].get_position();
+    // do the same for light_dir property
+    shadow.light_dir = spots[0].get_direction();
 
     //Move Cultists Balls - Hover Variable
     total_time += delta_time;
@@ -358,11 +385,8 @@ bool update(float delta_time) {
 
     // Set skybox position to camera position (camera in centre of skybox)
     //skybox.get_transform().position = cam.get_position();
+    skybox.get_transform().position = cam.get_position();
 
-
-   // if (glfwGetKey(renderer::get_window(), GLFW_KEY_W)) {
-       // skybox.get_transform().position += vec3(0.0f, 100.0f, 0.0f);
-    //}
 
     // Update cursor pos
     cursor_x = current_x;
@@ -375,6 +399,7 @@ bool update(float delta_time) {
         tcam.set_target(vec3(0.0f, 30.0f, 0.0f));
         tcam.set_projection(quarter_pi<float>(), renderer::get_screen_aspect(), 0.1f, 1000.0f);
         tcam.update(delta_time);
+        skybox.get_transform().position = tcam.get_position();
 
     }
     else if (current_cam == 2) {
@@ -382,6 +407,7 @@ bool update(float delta_time) {
         ccam.set_target(vec3(1.0f, 20.0f, 5.0f));
         ccam.set_projection(quarter_pi<float>(), renderer::get_screen_aspect(), 0.1f, 1000.0f);
         ccam.update(delta_time);
+        skybox.get_transform().position = ccam.get_position();
     }
 
     cout << 1 / delta_time << endl;
@@ -389,7 +415,47 @@ bool update(float delta_time) {
 }
 
 bool render() {
+    //SHADOWS
+      // *********************************
+  // Set render target to shadow map
+    renderer::set_render_target(shadow);
+    // Clear depth buffer bit
+    glClear(GL_DEPTH_BUFFER_BIT);
+    // Set face cull mode to front
+    glCullFace(GL_FRONT);
+    // *********************************
 
+    // We could just use the Camera's projection, 
+    // but that has a narrower FoV than the cone of the spot light, so we would get clipping.
+    // so we have yo create a new Proj Mat with a field of view of 90.
+    mat4 LightProjectionMat = perspective<float>(90.f, renderer::get_screen_aspect(), 0.1f, 1000.f);
+
+    // Bind shader
+    renderer::bind(shadow_eff);
+    // Render meshes
+    for (auto& e : meshes) {
+        auto m = e.second;
+        // Create MVP matrix
+        auto M = m.get_transform().get_transform_matrix();
+        // *********************************
+        // View matrix taken from shadow map
+        auto V = shadow.get_view();
+        // *********************************
+        auto MVP = LightProjectionMat * V * M;
+        // Set MVP matrix uniform
+        glUniformMatrix4fv(shadow_eff.get_uniform_location("MVP"), // Location of uniform
+            1,                                      // Number of values - 1 mat4
+            GL_FALSE,                               // Transpose the matrix?
+            value_ptr(MVP));                        // Pointer to matrix data
+// Render mesh
+        renderer::render(m);
+    }
+    // *********************************
+      // Set render target back to the screen
+    renderer::set_render_target();
+    // Set face cull mode to back
+    glCullFace(GL_BACK);
+    // *********************************
     // ********Render Skymap***********
 
     //Disable required gl
@@ -404,7 +470,7 @@ bool render() {
     auto M = skybox.get_transform().get_transform_matrix();
     auto V = tcam.get_view();
     auto P = tcam.get_projection();
-    auto MVP = P * V * M;
+    mat4 MVP = P * V * M;
 
     if (current_cam == 0) {
         // Calculate MVP for the skybox
@@ -517,9 +583,8 @@ bool render() {
         // Bind point lights
         renderer::bind(spots, "spots");
 
-
         // *********************************
-        // Bind defined texture to renderer or default if not availible
+        // Bind defined texture to renderer or default if not availible 
 
         if (textures[e.first].get_id() != 0)
             renderer::bind(textures[e.first], 0);
@@ -532,6 +597,18 @@ bool render() {
         // Set eye position- Get this from active camera  for LEFF 
         vec3 eyeP = cam.get_position();
         glUniform3f(leff.get_uniform_location("eye_pos"), eyeP.x, eyeP.y, eyeP.z);
+
+        //SHADOWS
+        // viewmatrix from the shadow map
+        auto viewMatrix = shadow.get_view();
+        // Multiply together with LightProjectionMat
+        LightProjectionMat = LightProjectionMat * shadow.get_view() * M;
+        // Set uniform
+        glUniformMatrix4fv(leff.get_uniform_location("lightMVP"), 1, GL_FALSE, value_ptr(LightProjectionMat));
+        // Bind shadow map texture - use texture unit 1
+        renderer::bind(shadow.buffer->get_depth(), 1);
+        // Set the shadow_map uniform
+        glUniform1i(leff.get_uniform_location("shadow_map"), 1);
 
         // *********************************
         // Render mesh 
