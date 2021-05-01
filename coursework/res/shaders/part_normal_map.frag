@@ -1,4 +1,4 @@
-#version 450 core
+
 
 vec3 calc_normal(in vec3 normal, in vec3 tangent, in vec3 binormal, in sampler2D normal_map, in vec2 tex_coord)
 {
@@ -18,4 +18,5 @@ vec3 calc_normal(in vec3 normal, in vec3 tangent, in vec3 binormal, in sampler2D
 	mat3 TBN = mat3(tangent, binormal, normal);
 	// Return sampled normal transformed by TBN
 	return normalize(TBN * sampled_normal);
+	//return normal;
 }

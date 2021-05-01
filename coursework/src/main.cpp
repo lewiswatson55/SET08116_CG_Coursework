@@ -29,13 +29,20 @@ effect sky_eff;
 mesh skybox;
 cubemap cube_map;
 
+//CCTV EFFECT
+effect static_eff;
+texture alpha_map, static_alpha_map;
+void update_static();
+int staticframe = 0;
+map<int, texture> staticframes;
+
 //Cam Inits
 GLFWwindow* window;
 target_camera tcam;
 target_camera ccam;
 free_camera cam;
 
-int current_cam = 1;
+int current_cam = 0;
 double cursor_x = 0.0;
 double cursor_y = 0.0;
 
@@ -82,6 +89,11 @@ bool load_content() {
         screen_quad.add_buffer(tex_coords, BUFFER_INDEXES::TEXTURE_COORDS_0);
         screen_quad.set_type(GL_TRIANGLE_STRIP);
      // *********************************
+
+    //Load Static Frames
+      for (int sfs = 1; sfs <= 13; sfs++) {
+         staticframes[sfs] = texture("./res/textures/static_frames/static" + to_string(sfs) + ".gif");
+      }
 
     // Load brick_normalmap.jpg texture
     //normal_map = texture("./res/textures/old_normal_map.jpg");
@@ -328,6 +340,11 @@ bool load_content() {
   tex_eff.add_shader("./res/shaders/simple_texture.frag", GL_FRAGMENT_SHADER);
   tex_eff.build();
 
+  //CCTV EFFECT
+  static_eff.add_shader("./res/shaders/simple_texture.vert", GL_VERTEX_SHADER);
+  static_eff.add_shader("./res/shaders/cctv.frag", GL_FRAGMENT_SHADER);
+  static_eff.build();
+
   // Set camera properties
   cam.set_position(vec3(0.0f, 10.0f, 110.0f));
   cam.set_target(vec3(0.0f, 0.0f, 0.0f));
@@ -335,20 +352,26 @@ bool load_content() {
   return true;
 }
 
+//CCTV Static Effect Update - Cycle through frames of animation
+void update_static() {
+    staticframe++;
+    static_alpha_map = staticframes[staticframe];
+    if (staticframe == 13) { staticframe = 0; }
+}
 
 bool update(float delta_time) {
 
-    if (glfwGetKey(renderer::get_window(), 'T') == GLFW_PRESS)
+   // if (glfwGetKey(renderer::get_window(), 'T') == GLFW_PRESS)
         //spots[1].set_position(vec3(10.0f, 0.0f, 0.0f) + spots[1].get_position());
-        spots[1].set_direction(normalize(vec3(1, 0, 0) + spots[1].get_direction()));
+      //  spots[1].set_direction(normalize(vec3(1, 0, 0) + spots[1].get_direction()));
 
-    if (glfwGetKey(renderer::get_window(), 'Y') == GLFW_PRESS)
+   // if (glfwGetKey(renderer::get_window(), 'Y') == GLFW_PRESS)
         //spots[1].set_position(vec3(0.0f, 10.0f, 0.0f) + spots[1].get_position());
-        spots[1].set_direction(normalize(vec3(0, 1, 0) + spots[1].get_direction()));
+      //  spots[1].set_direction(normalize(vec3(0, 1, 0) + spots[1].get_direction()));
 
-    if (glfwGetKey(renderer::get_window(), 'U') == GLFW_PRESS)
+    ///if (glfwGetKey(renderer::get_window(), 'U') == GLFW_PRESS)
         //spots[1].set_position(vec3(0.0f, 0.0f, 10.0f) + spots[1].get_position());
-        spots[1].set_direction(normalize(vec3(0, 0, 1) + spots[1].get_direction()));
+        //spots[1].set_direction(normalize(vec3(0, 0, 1) + spots[1].get_direction()));
 
     // Flip frame
     current_frame = (current_frame + 1) % 2;
@@ -444,6 +467,7 @@ bool update(float delta_time) {
         tcam.set_projection(quarter_pi<float>(), renderer::get_screen_aspect(), 0.1f, 1000.0f);
         tcam.update(delta_time);
         skybox.get_transform().position = tcam.get_position();
+        update_static();
 
     }
     else if (current_cam == 2) {
@@ -637,6 +661,7 @@ bool render() {
         // Bind point lights
         renderer::bind(spots, "spots");
 
+
         // *********************************
         // Bind defined texture to renderer or default if not availible 
 
@@ -665,6 +690,7 @@ bool render() {
         glUniform1i(leff.get_uniform_location("shadow_map"), 1);
 
         // *********************************
+
         // Render mesh 
         renderer::render(m);
     }
@@ -696,6 +722,33 @@ bool render() {
         // Render screen quad
         renderer::render(screen_quad);
     //******************
+
+        // CCTV CAMERA EFFECT
+        if (current_cam == 1) {
+            update_static();
+
+            // Set render target back to the screen
+            renderer::set_render_target();
+            // Bind Tex effect
+            renderer::bind(static_eff);
+            // MVP is now the identity matrix
+            MVP = mat4(1);
+            // Set MVP matrix uniform
+            glUniformMatrix4fv(static_eff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
+
+            // Bind texture from frame buffer to TU 0
+            renderer::bind(frames[1].get_frame(), 0);
+            // Set the tex uniform, 0
+            glUniform1i(static_eff.get_uniform_location("tex"), 0);
+            // Bind alpha texture to TU, 1
+            renderer::bind(static_alpha_map, 1);
+            // Set the tex uniform, 1
+            glUniform1i(static_eff.get_uniform_location("alpha_map"), 1);
+            // Render the screen quad
+            renderer::render(screen_quad);
+
+
+        }
 
     // Screen Pass
          // Set render target back to the screen
