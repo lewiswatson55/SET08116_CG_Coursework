@@ -281,21 +281,22 @@ bool load_content() {
   //Spot Light Properties
   spots[0].set_position(vec3(2.0f, 10, -25));
   spots[0].set_direction(normalize(vec3(-1, 1, 1)));
-  spots[1].set_position(vec3(-2.0f, 10, -25));
-  spots[1].set_direction(normalize(vec3(-1, 1, 1)));
+  //spots[1].set_position(vec3(-2.0f, 10, -25));
+  spots[1].set_position(vec3(0.0f, 15.0f, 65.0f));
+  spots[1].set_direction(normalize(vec3(0, 0, 0)));
 
   //Set all spot lights to same range/colour/power value
   for (auto eb : spots)
   {
       eb.set_range(10);
-      eb.set_light_colour(vec4(0.0f, 0.0f, 0.0f, 1.0f));
+      eb.set_light_colour(vec4(1.0f, 1.0f, 1.0f, 1.0f));
       eb.set_power(1);
   }
 
   //Lighting 
   light.set_ambient_intensity(vec4(0.2f, 0.2f, 0.2f, 1.0f));
   light.set_light_colour(vec4(0.0f, 0.0f, 0.0f, 0.0f));
-  light.set_direction(vec3(1, 1, -1));
+  light.set_direction(vec3(0, 0, 0));
 
 
   // Shaders, multi frag shader variable and associated vert
@@ -303,9 +304,6 @@ bool load_content() {
   vector<string> frag_shaders{ "./res/shaders/shader.frag", "./res/shaders/part_direction.frag",
                             "./res/shaders/part_point.frag", "./res/shaders/part_spot.frag", "./res/shaders/part_shadow.frag"};
   leff.add_shader(frag_shaders, GL_FRAGMENT_SHADER);
-
-  //leff.add_shader("./res/shaders/multi-light.frag", GL_FRAGMENT_SHADER); 
-  //leff.add_shader("./res/shaders/multi-light.vert", GL_VERTEX_SHADER);
 
 
   // Build lights effect
@@ -317,8 +315,8 @@ bool load_content() {
   sky_eff.build();
 
   //Shadows
-  shadow_eff.add_shader("./res/shaders/spot.vert", GL_VERTEX_SHADER);
-  shadow_eff.add_shader("./res/shaders/spot.frag", GL_FRAGMENT_SHADER);
+  shadow_eff.add_shader("./res/shaders/point.vert", GL_VERTEX_SHADER);
+  shadow_eff.add_shader("./res/shaders/point.frag", GL_FRAGMENT_SHADER);
   shadow_eff.build();
 
   //Motion Blur
@@ -340,18 +338,30 @@ bool load_content() {
 
 bool update(float delta_time) {
 
+    if (glfwGetKey(renderer::get_window(), 'T') == GLFW_PRESS)
+        //spots[1].set_position(vec3(10.0f, 0.0f, 0.0f) + spots[1].get_position());
+        spots[1].set_direction(normalize(vec3(1, 0, 0) + spots[1].get_direction()));
+
+    if (glfwGetKey(renderer::get_window(), 'Y') == GLFW_PRESS)
+        //spots[1].set_position(vec3(0.0f, 10.0f, 0.0f) + spots[1].get_position());
+        spots[1].set_direction(normalize(vec3(0, 1, 0) + spots[1].get_direction()));
+
+    if (glfwGetKey(renderer::get_window(), 'U') == GLFW_PRESS)
+        //spots[1].set_position(vec3(0.0f, 0.0f, 10.0f) + spots[1].get_position());
+        spots[1].set_direction(normalize(vec3(0, 0, 1) + spots[1].get_direction()));
+
     // Flip frame
     current_frame = (current_frame + 1) % 2;
 
     // Press s to save
-    if (glfwGetKey(renderer::get_window(), 'x') == GLFW_PRESS)
-        shadow.buffer->save("C:\\Users\\lewis\\OneDrive - Edinburgh Napier University\\Modules\\Second Year\\2 CG\\test.png");
+    if (glfwGetKey(renderer::get_window(), 'X') == GLFW_PRESS)
+        shadow.buffer->save("C:\\Users\\lewis\\OneDrive - Edinburgh Napier University\\Modules\\Second Year\\2 CG\\testt.png");
 
     //SHADOWS
     // Update the shadow map light_position from the spot light
-    shadow.light_position = spots[0].get_position();
+    shadow.light_position = spots[1].get_position();
     // do the same for light_dir property
-    shadow.light_dir = spots[0].get_direction();
+    shadow.light_dir = spots[1].get_direction();
 
     //Move Cultists Balls - Hover Variable
     total_time += delta_time;
@@ -499,6 +509,7 @@ bool render() {
     // Set face cull mode to back
     glCullFace(GL_BACK);
     // *********************************
+
     // ********Render Skymap***********
 
     //Disable required gl
