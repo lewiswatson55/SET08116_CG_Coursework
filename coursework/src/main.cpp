@@ -43,6 +43,13 @@ double cursor_y = 0.0;
 float hover = 0.0f;
 float total_time = 0.0f;
 
+//Motion Blur
+frame_buffer frames[2];
+frame_buffer temp_frame;
+unsigned int current_frame = 0;
+geometry screen_quad;
+effect motion_blur, tex_eff;
+
 bool initialise() {
 
     // *********************************
@@ -58,6 +65,23 @@ bool initialise() {
 }
 
 bool load_content() {
+
+    // *********Motion Blur**************
+    // Create 2 frame buffers - use screen width and height
+        frames[0] = frame_buffer(renderer::get_screen_width(), renderer::get_screen_height());
+        frames[1] = frame_buffer(renderer::get_screen_width(), renderer::get_screen_height());
+
+        // Create a temp framebuffer
+        temp_frame = frame_buffer(renderer::get_screen_width(), renderer::get_screen_height());
+
+        // Create screen quad
+        vector<vec3> positions{ vec3(-1.0f, -1.0f, 0.0f), vec3(1.0f, -1.0f, 0.0f), vec3(-1.0f, 1.0f, 0.0f),
+            vec3(1.0f, 1.0f, 0.0f) };
+        vector<vec2> tex_coords{ vec2(0.0, 0.0), vec2(1.0f, 0.0f), vec2(0.0f, 1.0f), vec2(1.0f, 1.0f) };
+        screen_quad.add_buffer(positions, BUFFER_INDEXES::POSITION_BUFFER);
+        screen_quad.add_buffer(tex_coords, BUFFER_INDEXES::TEXTURE_COORDS_0);
+        screen_quad.set_type(GL_TRIANGLE_STRIP);
+     // *********************************
 
     // Load brick_normalmap.jpg texture
     //normal_map = texture("./res/textures/old_normal_map.jpg");
@@ -277,7 +301,7 @@ bool load_content() {
   // Shaders, multi frag shader variable and associated vert
   leff.add_shader("./res/shaders/shader.vert", GL_VERTEX_SHADER);
   vector<string> frag_shaders{ "./res/shaders/shader.frag", "./res/shaders/part_direction.frag",
-                            "./res/shaders/part_point.frag", "./res/shaders/part_spot.frag", "./res/shaders/part_shadow.frag" };
+                            "./res/shaders/part_point.frag", "./res/shaders/part_spot.frag", "./res/shaders/part_shadow.frag"};
   leff.add_shader(frag_shaders, GL_FRAGMENT_SHADER);
 
   //leff.add_shader("./res/shaders/multi-light.frag", GL_FRAGMENT_SHADER); 
@@ -292,12 +316,19 @@ bool load_content() {
   sky_eff.add_shader("./res/shaders/skybox.frag", GL_FRAGMENT_SHADER);
   sky_eff.build();
 
-
   //Shadows
   shadow_eff.add_shader("./res/shaders/spot.vert", GL_VERTEX_SHADER);
   shadow_eff.add_shader("./res/shaders/spot.frag", GL_FRAGMENT_SHADER);
   shadow_eff.build();
 
+  //Motion Blur
+  motion_blur.add_shader("./res/shaders/simple_texture.vert", GL_VERTEX_SHADER);
+  motion_blur.add_shader("./res/shaders/motion_blur.frag", GL_FRAGMENT_SHADER);
+  motion_blur.build();
+
+  tex_eff.add_shader("./res/shaders/simple_texture.vert", GL_VERTEX_SHADER);
+  tex_eff.add_shader("./res/shaders/simple_texture.frag", GL_FRAGMENT_SHADER);
+  tex_eff.build();
 
   // Set camera properties
   cam.set_position(vec3(0.0f, 10.0f, 110.0f));
@@ -308,6 +339,9 @@ bool load_content() {
 
 
 bool update(float delta_time) {
+
+    // Flip frame
+    current_frame = (current_frame + 1) % 2;
 
     // Press s to save
     if (glfwGetKey(renderer::get_window(), 'x') == GLFW_PRESS)
@@ -415,9 +449,18 @@ bool update(float delta_time) {
 }
 
 bool render() {
-    //SHADOWS
+
+    //First Pass
+        // Set render target to temp frame
+        renderer::set_render_target(temp_frame);
+        // Clear frame
+        renderer::clear();
+    //*********
+
+
+  //SHADOWS
       // *********************************
-  // Set render target to shadow map
+    // Set render target to shadow map
     renderer::set_render_target(shadow);
     // Clear depth buffer bit
     glClear(GL_DEPTH_BUFFER_BIT);
@@ -447,12 +490,12 @@ bool render() {
             1,                                      // Number of values - 1 mat4
             GL_FALSE,                               // Transpose the matrix?
             value_ptr(MVP));                        // Pointer to matrix data
-// Render mesh
+            // Render mesh
         renderer::render(m);
     }
     // *********************************
       // Set render target back to the screen
-    renderer::set_render_target();
+    renderer::set_render_target(temp_frame);
     // Set face cull mode to back
     glCullFace(GL_BACK);
     // *********************************
@@ -614,6 +657,52 @@ bool render() {
         // Render mesh 
         renderer::render(m);
     }
+
+    //*********Second Pass*********
+        // Set render target to current frame
+        renderer::set_render_target(frames[current_frame]);
+        // Clear frame
+        renderer::clear();
+        // Bind motion blur effect
+        renderer::bind(motion_blur);
+        // MVP is now the identity matrix
+        MVP = mat4(1.0);
+        // Set MVP matrix uniform
+        glUniformMatrix4fv(motion_blur.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
+
+        // Bind tempframe to TU 0.
+        renderer::bind(temp_frame.get_frame(), 0);
+        // Bind frames[(current_frame + 1) % 2] to TU 1.
+        renderer::bind(frames[(current_frame + 1) % 2].get_frame(), 1);
+
+        // Set tex uniforms
+        glUniform1i(motion_blur.get_uniform_location("tex"), 0);
+        glUniform1i(motion_blur.get_uniform_location("previous_frame"), 1);
+
+        // Set blend factor (0.2f)
+        glUniform1f(motion_blur.get_uniform_location("blend_factor"), 0.2f);
+
+        // Render screen quad
+        renderer::render(screen_quad);
+    //******************
+
+    // Screen Pass
+         // Set render target back to the screen
+        renderer::set_render_target();
+
+        // empty frame
+        renderer::bind(tex_eff);
+
+        // Set MVP matrix uniform
+        glUniformMatrix4fv(tex_eff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
+
+        // Bind texture from frame buffer
+        renderer::bind(frames[current_frame].get_frame(), 3);
+
+        // Set the uniform
+        glUniform1i(tex_eff.get_uniform_location("tex"), 3);
+        // Render the screen quad
+        renderer::render(screen_quad);
 
     return true;
 }
