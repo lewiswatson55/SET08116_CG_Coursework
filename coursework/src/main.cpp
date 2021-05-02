@@ -446,8 +446,8 @@ bool load_content() {
   spots[0].set_position(vec3(2.0f, 10, -25));
   spots[0].set_direction(normalize(vec3(-1, 1, 1)));
   //spots[1].set_position(vec3(-2.0f, 10, -25));
-  spots[1].set_position(vec3(0.0f, 15.0f, 65.0f));
-  spots[1].set_direction(normalize(vec3(0, 0, 0)));
+  spots[1].set_position(vec3(45.0f, -20.0f, -45.0f));
+  spots[1].set_direction(normalize(vec3(1.0, -2.0, -1.0)));
 
   //Set all spot lights to same range/colour/power value
   for (auto eb : spots)
