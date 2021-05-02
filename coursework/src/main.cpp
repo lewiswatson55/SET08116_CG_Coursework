@@ -1,6 +1,11 @@
 #include <glm\glm.hpp>
 #include <graphics_framework.h>
 
+// Types of fog
+#define FOG_LINEAR 0
+#define FOG_EXP 1
+#define FOG_EXP2 2
+
 using namespace std;
 using namespace graphics_framework;
 using namespace glm;
@@ -19,6 +24,8 @@ directional_light light;
 texture tex;
 effect leff;
 texture normal_map;
+
+vec4 fog_colour = vec4(0.5f, 0.5f, 0.5f, 1.0f);
 
 //Shadows
 effect shadow_eff;
@@ -305,16 +312,18 @@ bool load_content() {
       eb.set_power(1);
   }
 
-  //Lighting 
+  //Directional Lighting + Ambient
   light.set_ambient_intensity(vec4(0.2f, 0.2f, 0.2f, 1.0f));
   light.set_light_colour(vec4(0.0f, 0.0f, 0.0f, 0.0f));
   light.set_direction(vec3(0, 0, 0));
 
+  // Set the clear colour to be a light grey, the same as our fog. TK
+  renderer::setClearColour(0.5f, 0.5f, 0.5f);
 
-  // Shaders, multi frag shader variable and associated vert
+  // Shaders, multi frag shader variable and associated vert 
   leff.add_shader("./res/shaders/shader.vert", GL_VERTEX_SHADER);
   vector<string> frag_shaders{ "./res/shaders/shader.frag", "./res/shaders/part_direction.frag",
-                            "./res/shaders/part_point.frag", "./res/shaders/part_spot.frag", "./res/shaders/part_shadow.frag"};
+                            "./res/shaders/part_point.frag", "./res/shaders/part_spot.frag", "./res/shaders/part_shadow.frag", "./res/shaders/part_fog.frag"};
   leff.add_shader(frag_shaders, GL_FRAGMENT_SHADER);
 
 
@@ -340,7 +349,7 @@ bool load_content() {
   tex_eff.add_shader("./res/shaders/simple_texture.frag", GL_FRAGMENT_SHADER);
   tex_eff.build();
 
-  //CCTV EFFECT
+  //CCTV effect
   static_eff.add_shader("./res/shaders/simple_texture.vert", GL_VERTEX_SHADER);
   static_eff.add_shader("./res/shaders/cctv.frag", GL_FRAGMENT_SHADER);
   static_eff.build();
@@ -609,6 +618,11 @@ bool render() {
             //glUniformMatrix4fv(eff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
             glUniformMatrix4fv(leff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
 
+            // Create MV matrix
+            auto MV = V * M;
+            // Set MV matrix uniform
+            glUniformMatrix4fv(leff.get_uniform_location("MV"), 1, GL_FALSE, value_ptr(MV));
+
         }
         else if (current_cam == 1) {
             auto M = m.get_transform().get_transform_matrix();
@@ -626,6 +640,11 @@ bool render() {
             mat3 N = m.get_transform().get_normal_matrix();
             glUniformMatrix3fv(leff.get_uniform_location("N"), 1, GL_FALSE, value_ptr(N));
 
+            // Create MV matrix
+            auto MV = V * M;
+            // Set MV matrix uniform
+            glUniformMatrix4fv(leff.get_uniform_location("MV"), 1, GL_FALSE, value_ptr(MV));
+
         }
         else if (current_cam == 2) {
             auto M = m.get_transform().get_transform_matrix();
@@ -642,13 +661,18 @@ bool render() {
             vec3 eyeP = cam.get_position();
             glUniform3f(leff.get_uniform_location("eye_pos"), eyeP.x, eyeP.y, eyeP.z);
 
+            // Create MV matrix
+            auto MV = V * M;
+            // Set MV matrix uniform
+            glUniformMatrix4fv(leff.get_uniform_location("MV"), 1, GL_FALSE, value_ptr(MV));
+
             // Set MVP matrix uniform
             //glUniformMatrix4fv(eff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));      
             glUniformMatrix4fv(leff.get_uniform_location("MVP"), 1, GL_FALSE, value_ptr(MVP));
 
         }
 
-        // Bind material 
+        // Bind material
         material mm = m.get_material();
         renderer::bind(mm, "mat");
 
@@ -670,12 +694,24 @@ bool render() {
         else
             renderer::bind(textures["default"], 0);
 
-        // Set the texture value for the shaders heree
+        // Set the texture value for the shaders here
         glUniform1i(leff.get_uniform_location("tex"), 0);
 
-        // Set eye position- Get this from active camera  for LEFF 
+        // Set eye position- Get this from active camera  for LEFF
         vec3 eyeP = cam.get_position();
         glUniform3f(leff.get_uniform_location("eye_pos"), eyeP.x, eyeP.y, eyeP.z);
+        
+        // ***********Fog Effect************
+        // Set fog colour to the same as the clear colour - Set as global variable
+        glUniform4fv(leff.get_uniform_location("fog_colour"), 1, value_ptr(fog_colour));
+        // Set fog start:  5.0f
+        glUniform1f(leff.get_uniform_location("fog_start"), 500.0f);
+        // Set fog end:  100.0f
+        glUniform1f(leff.get_uniform_location("fog_end"), 1000.0f);
+        // Set fog density: 0.04f
+        glUniform1f(leff.get_uniform_location("fog_density"), 0.001f);
+        // Set fog type: FOG_EXP2
+        glUniform1i(leff.get_uniform_location("fog_type"), 2);
 
         //SHADOWS
         // viewmatrix from the shadow map
@@ -688,6 +724,8 @@ bool render() {
         renderer::bind(shadow.buffer->get_depth(), 1);
         // Set the shadow_map uniform
         glUniform1i(leff.get_uniform_location("shadow_map"), 1);
+
+        // *********************************
 
         // *********************************
 
@@ -750,7 +788,7 @@ bool render() {
 
         }
 
-    // Screen Pass
+         // Screen Pass
          // Set render target back to the screen
         renderer::set_render_target();
 

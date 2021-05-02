@@ -4,6 +4,8 @@
 uniform mat4 M;
 // Transformation matrix
 uniform mat4 MVP;
+// MV transformation
+uniform mat4 MV;
 // Normal matrix
 uniform mat3 N;
 // The light transformation matrix
@@ -30,6 +32,8 @@ layout(location = 2) out vec3 binormal_out;
 layout(location = 3) out vec3 tangent_out;
 // Outgoing position in light space
 layout (location = 4) out vec4 vertex_light;
+// Camera space position
+layout(location = 5) out vec4 CS_position;
 // Outgoing texture coordinate
 layout (location = 10) out vec2 tex_coord_out;
 
@@ -38,7 +42,9 @@ void main()
   // Calculate screen position
   gl_Position = MVP * vec4(position, 1.0);
   // *********************************
-  // Output other values to fragment shader
+
+  //Calculate Camera Space
+  CS_position = MV * vec4(position, 1.0);
 
   ///vertex_position = (M * vec4(position, 1.0)).xyz;
   vertex_position = vec3(M * vec4(position, 1.0f));

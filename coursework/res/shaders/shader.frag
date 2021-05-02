@@ -50,14 +50,12 @@ struct material {
 #endif
 
 // Forward declarations of used functions
-vec4 calculate_direction(in directional_light light, in material mat, in vec3 normal, in vec3 view_dir,
-                         in vec4 tex_colour);
-vec4 calculate_point(in point_light point, in material mat, in vec3 position, in vec3 normal, in vec3 view_dir,
-                     in vec4 tex_colour);
-vec4 calculate_spot(in spot_light spot, in material mat, in vec3 position, in vec3 normal, in vec3 view_dir,
-                    in vec4 tex_colour);
+vec4 calculate_direction(in directional_light light, in material mat, in vec3 normal, in vec3 view_dir, in vec4 tex_colour);
+vec4 calculate_point(in point_light point, in material mat, in vec3 position, in vec3 normal, in vec3 view_dir, in vec4 tex_colour);
+vec4 calculate_spot(in spot_light spot, in material mat, in vec3 position, in vec3 normal, in vec3 view_dir, in vec4 tex_colour);
 vec3 calc_normal(in vec3 normal, in vec3 tangent, in vec3 binormal, in sampler2D normal_map, in vec2 tex_coord);
 float calculate_shadow(in sampler2D shadow_map, in vec4 light_space_pos);
+float calculate_fog(in float fog_coord, in vec4 fog_colour, in float fog_start, in float fog_end, in float fog_density, in int fog_type);
 
 // Directional light information
 uniform directional_light light;
@@ -75,17 +73,30 @@ uniform sampler2D tex;
 uniform sampler2D normal_map;
 // Shadow map to sample from
 uniform sampler2D shadow_map;
+// Fog colour
+uniform vec4 fog_colour;
+// Fog start position
+uniform float fog_start;
+// Fog end position
+uniform float fog_end;
+// Fog density
+uniform float fog_density;
+// Fog type
+uniform int fog_type;
+
 
 // Incoming position
 layout(location = 0) in vec3 position;
 // Incoming normal
 layout(location = 1) in vec3 normal;
-// Incomnif binormal
+// Incoming binormal
 layout(location = 2) in vec3 binormal;
 // Incoming tangent
 layout(location = 3) in vec3 tangent;
 // Incoming light space position
 layout(location = 4) in vec4 light_space_pos;
+// Camera space position
+layout(location = 5) in vec4 CS_position;
 // Incoming texture coordinate
 layout(location = 10) in vec2 tex_coord;
 
@@ -94,9 +105,9 @@ layout(location = 0) out vec4 colour;
 
 void main() {
 
-	//Shadows
-	  // Calculate shade factor
-		float shade = calculate_shadow(shadow_map, light_space_pos);
+  //Shadows
+  // Calculate shade factor
+  //float shade = calculate_shadow(shadow_map, light_space_pos);
 
   // *********************************
   colour = vec4(0.0, 0.0, 0.0, 1.0);
@@ -120,9 +131,21 @@ void main() {
 	}
 
   // Scale colour by shade
-	colour *= shade;
+	//colour *= shade;
 
-	colour.a = 1.0f;
+  // Ensure alpha is 1.0f
+  colour.a = 1.0f;
+
+  //Calculate Foggy Bois
+	  // Calculate fog coord
+	  float fog_coord = abs(CS_position.z / CS_position.w);
+
+	  // Calculate fog factor
+	  float fog_factor = calculate_fog(fog_coord, fog_colour, fog_start, fog_end, fog_density, fog_type);
+
+	  // Final colour is mix between colour and fog colour based on factor
+	  colour = mix(colour,fog_colour,fog_factor);
+	  colour.a = 1.0f;
 
   // *********************************
 }
