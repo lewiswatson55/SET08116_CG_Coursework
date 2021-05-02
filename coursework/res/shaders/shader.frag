@@ -107,7 +107,7 @@ void main() {
 
   //Shadows
   // Calculate shade factor
-  //float shade = calculate_shadow(shadow_map, light_space_pos);
+  float shade = calculate_shadow(shadow_map, light_space_pos);
 
   // *********************************
   colour = vec4(0.0, 0.0, 0.0, 1.0);
@@ -131,7 +131,7 @@ void main() {
 	}
 
   // Scale colour by shade
-	//colour *= shade;
+	colour *= shade;
 
   // Ensure alpha is 1.0f
   colour.a = 1.0f;
