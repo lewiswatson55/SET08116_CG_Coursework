@@ -112,10 +112,8 @@ void generate_terrain(geometry& geom, const texture& height_map, unsigned int wi
         point.x = -(width / 2.0f) + (width_point * static_cast<float>(x));
 
         for (int z = 0; z < height_map.get_height(); ++z) {
-            // *********************************
             // Calculate z position of point
             point.z = -(depth / 2.0f) + (depth_point * static_cast<float>(z));
-            // *********************************
             // Y position based on red component of height map data
             point.y = data[(z * height_map.get_width()) + x].y * height_scale;
             // Add point to position data
@@ -152,9 +150,9 @@ void generate_terrain(geometry& geom, const texture& height_map, unsigned int wi
     // Part 2 - Calculate normals for the height map
     for (unsigned int i = 0; i < indices.size() / 3; ++i) {
         // Get indices for the triangle
-        auto idx1 = indices[i * 3];
-        auto idx2 = indices[i * 3 + 1];
-        auto idx3 = indices[i * 3 + 2];
+        auto idx1 = indices[i*3];
+        auto idx2 = indices[i*3+1];
+        auto idx3 = indices[i*3+2];
 
         // Calculate two sides of the triangle
         vec3 side1 = positions[idx1] - positions[idx3];
@@ -165,9 +163,9 @@ void generate_terrain(geometry& geom, const texture& height_map, unsigned int wi
         vec3 n = cross(side2, side1);
 
         // Add to normals in the normal buffer using the indices for the triangle
-        normals[idx1] = normals[idx1] + n;
-        normals[idx2] = normals[idx2] + n;
-        normals[idx3] = normals[idx3] + n;
+        normals[idx1] = normals[idx1]+n;
+        normals[idx2] = normals[idx2]+ n;
+        normals[idx3] = normals[idx3]+ n;
         // *********************************
     }
 
@@ -188,7 +186,7 @@ void generate_terrain(geometry& geom, const texture& height_map, unsigned int wi
     // Part 4 - Calculate texture weights for each vertex
     for (unsigned int x = 0; x < height_map.get_width(); ++x) {
         for (unsigned int z = 0; z < height_map.get_height(); ++z) {
-            // Calculate tex weight
+            // Calculate texture weighting
             vec4 tex_weight(clamp(1.0f - abs(data[(height_map.get_width() * z) + x].y - 0.0f) / 0.25f, 0.0f, 1.0f),
                 clamp(1.0f - abs(data[(height_map.get_width() * z) + x].y - 0.15f) / 0.25f, 0.0f, 1.0f),
                 clamp(1.0f - abs(data[(height_map.get_width() * z) + x].y - 0.5f) / 0.25f, 0.0f, 1.0f),
@@ -207,12 +205,16 @@ void generate_terrain(geometry& geom, const texture& height_map, unsigned int wi
 
     // Add necessary buffers to the geometry
     geom.add_buffer(positions, BUFFER_INDEXES::POSITION_BUFFER);
+
     geom.add_buffer(normals, BUFFER_INDEXES::NORMAL_BUFFER);
+
     geom.add_buffer(tex_coords, BUFFER_INDEXES::TEXTURE_COORDS_0);
+
     geom.add_buffer(tex_weights, BUFFER_INDEXES::TEXTURE_COORDS_1);
+
     geom.add_index_buffer(indices);
 
-    // Delete data
+    //Clear data
     delete[] data;
 }
 
@@ -515,24 +517,12 @@ void update_static() {
 
 bool update(float delta_time) {
 
-   // if (glfwGetKey(renderer::get_window(), 'T') == GLFW_PRESS)
-        //spots[1].set_position(vec3(10.0f, 0.0f, 0.0f) + spots[1].get_position());
-      //  spots[1].set_direction(normalize(vec3(1, 0, 0) + spots[1].get_direction()));
-
-   // if (glfwGetKey(renderer::get_window(), 'Y') == GLFW_PRESS)
-        //spots[1].set_position(vec3(0.0f, 10.0f, 0.0f) + spots[1].get_position());
-      //  spots[1].set_direction(normalize(vec3(0, 1, 0) + spots[1].get_direction()));
-
-    ///if (glfwGetKey(renderer::get_window(), 'U') == GLFW_PRESS)
-        //spots[1].set_position(vec3(0.0f, 0.0f, 10.0f) + spots[1].get_position());
-        //spots[1].set_direction(normalize(vec3(0, 0, 1) + spots[1].get_direction()));
-
     // Flip frame
     current_frame = (current_frame + 1) % 2;
 
-    // Press s to save
+    // Press s to save shadow map nuffer
     if (glfwGetKey(renderer::get_window(), 'X') == GLFW_PRESS)
-        shadow.buffer->save("C:\\Users\\lewis\\OneDrive - Edinburgh Napier University\\Modules\\Second Year\\2 CG\\testt.png");
+        shadow.buffer->save("./testt.png");
 
     //SHADOWS
     // Update the shadow map light_position from the spot light
